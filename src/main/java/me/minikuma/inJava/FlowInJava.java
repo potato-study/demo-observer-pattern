@@ -29,9 +29,9 @@ public class FlowInJava {
 
             @Override
             public void onNext(String item) {
-                System.out.println("On Next Call");
-                System.out.println("Thread : " + Thread.currentThread().getName());
-                System.out.println(item);
+                System.out.println("(1) On Next Call");
+                System.out.println("(2) Thread : " + Thread.currentThread().getName());
+                System.out.println("(3) Message : " + item);
             }
 
             @Override
@@ -41,12 +41,12 @@ public class FlowInJava {
 
             @Override
             public void onComplete() {
-                System.out.println("message completed");
+                System.out.println("(4) message completed");
             }
         };
 
         publisher.subscribe(subscriber);
 
-        System.out.println("다 끝났다.....");
+        System.out.println("(5) 다 끝났다.....");
     }
 }

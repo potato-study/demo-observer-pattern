@@ -5,8 +5,10 @@ import java.util.concurrent.SubmissionPublisher;
 /**
     Flow Class 사용하여 Pub/Sub 구현 -> 비동기
  */
+
 public class FlowAsyncInJava {
     public static void main(String[] args) {
+
         Flow.Publisher<String> publisher = new SubmissionPublisher<>();
 
         Flow.Subscriber<String> subscriber = new Flow.Subscriber<String>() {
@@ -17,14 +19,15 @@ public class FlowAsyncInJava {
             public void onSubscribe(Flow.Subscription subscription) {
                 System.out.println("구독");
                 this.subscription = subscription;
-                this.subscription.request(1); // back presser
+                this.subscription.request(1);
             }
 
             @Override
             public void onNext(String item) {
                 System.out.println("onNext 호출");
                 System.out.println("스레드: " + Thread.currentThread().getName());
-                System.out.println(item);
+                System.out.println("메시지 : " + item);
+                this.subscription.request(1); // back presser
             }
 
             @Override
@@ -42,6 +45,6 @@ public class FlowAsyncInJava {
 
         ((SubmissionPublisher)publisher).submit("Hello");
 
-        System.out.println("먼저 출력될수도...");
+        System.out.println("먼저 출력 될수도...");
     }
 }

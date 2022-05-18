@@ -7,6 +7,7 @@ import java.util.Observer;
  *  Observer interface
  *  Observable class
  */
+@SuppressWarnings("deprecation")
 public class ObserverInJava {
 
     static class User implements Observer { // deprecated java 9 +
