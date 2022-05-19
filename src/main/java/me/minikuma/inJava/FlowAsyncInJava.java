@@ -3,11 +3,11 @@ package me.minikuma.inJava;
 import java.util.concurrent.Flow;
 import java.util.concurrent.SubmissionPublisher;
 /**
-    Flow Class 사용하여 Pub/Sub 구현 -> 비동기
+    Flow Class 사용 하여 Pub/Sub 구현 -> 비동기
  */
 
 public class FlowAsyncInJava {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         Flow.Publisher<String> publisher = new SubmissionPublisher<>();
 
@@ -46,5 +46,7 @@ public class FlowAsyncInJava {
         ((SubmissionPublisher)publisher).submit("Hello");
 
         System.out.println("먼저 출력 될수도...");
+
+        Thread.sleep(100);
     }
 }
