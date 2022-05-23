@@ -3,7 +3,7 @@ package me.minikuma.inJava;
 import java.util.concurrent.Flow;
 import java.util.concurrent.SubmissionPublisher;
 /**
-    Flow Class 사용 하여 Pub/Sub 구현 -> 비동기
+    Flow Class 사용 하여 Pub/Sub 구현 -> 비동기 방식 (비동기를 위한 별도의 스레드가 생성)
  */
 
 public class FlowAsyncInJava {

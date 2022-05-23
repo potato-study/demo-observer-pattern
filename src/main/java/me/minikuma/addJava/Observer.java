@@ -25,7 +25,7 @@ public class Observer {
 
         System.out.println("======");
 
-        // Observer 만들기
+        // 나만의 Observer 만들기
         IntObservable ob = new IntObservable();
 
         java.util.Observer observer = new java.util.Observer() {
@@ -36,7 +36,7 @@ public class Observer {
         };
 
         ob.addObserver(observer); // 옵저버 등록
-        ob.run();
+        ob.run(); // 옵저버 실행
     }
 }
 class IntObservable extends Observable implements Runnable {
@@ -47,7 +47,7 @@ class IntObservable extends Observable implements Runnable {
 
         for (Integer item : items) {
             setChanged();
-            notifyObservers(item);
+            notifyObservers(item); // notify
         }
     }
 }

@@ -4,6 +4,7 @@ import java.util.Observable;
 import java.util.Observer;
 
 /**
+ *  Java 9 + 사용 되지 않는 방식
  *  Observer interface
  *  Observable class
  */

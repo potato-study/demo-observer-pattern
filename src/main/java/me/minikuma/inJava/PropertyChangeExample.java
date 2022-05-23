@@ -36,9 +36,9 @@ public class PropertyChangeExample {
     public static void main(String[] args) {
         Subject subject = new Subject();
         User observer = new User();
-        subject.addObserver(observer);
+        subject.addObserver(observer); // 옵저버 등록
         subject.add("옵저버~~");
-        subject.removeObserver(observer);
+        subject.removeObserver(observer); // 옵저버 등록 제거
         subject.add("패턴~~ 메시지 없어유~");
     }
 
