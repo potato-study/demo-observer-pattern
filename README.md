@@ -1,14 +1,11 @@
 ## Observer Pattern
 
----
 
 ### Introduce
 
----
-
 Observer Pattern 을 구현함으로 동작원리를 이해하고 다양한 Observer Pattern 을 살펴보면서 조금 더 상세하게 패턴을 이해할 수 있도록 하였습니다. 추가로 Spring Reactive Stream 을 이해하기 위한 초기 단계로 Duality(쌍대성)을 살펴보는 예제를 담았습니다.
 
-
+---
 
 ### Setup
 
